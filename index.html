@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+   <meta charset="UTF-8"> <!--Metatags-->
+   <meta http-equiv="content-language" content="pt-br"> <!--Metatags-->
+   <meta name="author" content="Ana Clara Azevedo"> <!--Metatags-->
+   <meta name="description" content="Engenharia de Alimentos"> <!--Metatags-->
+   <meta name="keywords" content="Engenharia de Alimentos, Engenheiro de Alimentos, Boas Práticas de Fabricação"> <!--Metatags-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Metatags-->
+   <title>Meu Primeiro Site</title>
+   <link rel="shortcut icon" href="Imagens/Logo do Site/Logo do Site.ico" type="image/x-icon"> <!--Logotipo-->
+   <link rel="stylesheet" href="style.css"> <!--CSS Externo--> 
+  </head>
+  <body>
+
+    <header class="cabecalho">
+
+      <nav class="menu"> <!--Menu Dropdown-->
+
+          <figure class="menu-conteiner">
+           <img class="logo-cabecalho" src="Imagens/Menu/Logo do Site.png" alt="Engrenagem, logo do site" onclick="toggleMenu()"> <!--Fonte da imagem: Canva.-->
+           <figcaption class="logo-texto">Menu</figcaption>
+          </figure>
+   
+          <ul class="ul-menu" id="menuItems">
+           <li class="li-menu"><a class="a-menu" target="_blank" href="index.html"><img src="Imagens/Menu/Home.png" alt="Home" height="50px" width="50px">Home</a></li> 
+           <li class="li-menu"><a class="a-menu" href="#form"><img src="Imagens/Menu/Contato.png" alt="Contato" height="50px" width="50px">Contato</a></li>
+           <li class="li-menu"><a class="a-menu" href="#local"><img src="Imagens/Menu/Local.png" alt="Local" height="50px" width="50px">Local</a></li>
+          </ul>
+  
+      </nav>
+
+      <section class="section1"> 
+      
+       <h1 class="engalimentos">ENGENHARIA DE ALIMENTOS</h1>
+
+      </section>
+      
+    </header>
+
+    <main>
+
+      <h2 id="h2-section2">Engenharia de Alimentos é tipo "Nutrição"?</h2>
+
+      <section class="section2">
+
+        <section class="slider"> <!--Carrossel de Imagens-->
+
+          <div class="slides">
+  
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+  
+            <div class="slide primeiro">
+              <img src="Imagens/Página Inicial/Laboratório de Engenharia de Alimentos.jpg" alt="Laboratório de Engenharia de Alimentos" heigth="250px" width="500px"> <!--Fonte da imagem: Freepik.-->
+            </div>
+   
+            <div class="slide">
+              <img src="Imagens/Página Inicial/Engenheira de Alimentos.jpg" alt="Engenheira de Alimentos analisando tomates frescos" heigth="250px" width="500px"> <!--Fonte da imagem: Freepik.-->
+            </div>
+   
+            <div class="slide">
+              <img src="Imagens/Página Inicial/Engenheira de Alimentos 2.jpg" alt="Engenheira de Alimentos analisando tomates frescos" heigth="250px" width="500px"> <!--Fonte da imagem: Freepik.-->
+            </div>
+              
+            <div class="slide">
+              <img src="Imagens/Página Inicial/Engenheira de Alimentos 3.jpg" alt="Engenheira de Alimentos analisando tomates frescos" height="250px" width="500px"> <!--Fonte da imagem: Freepik.-->
+            </div>
+  
+            <div class="auto-nav">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+  
+          </div>
+  
+          <div class="manual-nav">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+
+        </section>
+
+        <!--Trecho de texto com plano de fundo colorido-->
+
+        <p class="paragrafo1">Ambas as áreas possuem foco no mesmo objeto de estudo: o alimento. No entanto, a Engenharia de Alimentos é um ramo multidisciplinar da engenharia que estuda os processos de produção de alimentos industrializados, desde a matéria-prima até o consumidor final. 
+         Por outro lado, a Nutrição é uma ciência que analisa as interações entre os alimentos e os nutrientes consumidos pelo ser humano, investigando como essas relações impactam a saúde e possíveis condições de doença. 
+         São áreas complementares, especialmente em um mundo onde há uma crescente preocupação com a escolha de alimentos mais saudáveis e nutritivos. A indústria de alimentos está se adaptando a essa mudança, trabalhando em conjunto com profissionais de nutrição para oferecer opções que promovam uma alimentação mais equilibrada e benéfica para a saúde.
+        </p>
+    
+      </section>
+
+      <h2>Qual a importância de um Engenheiro de Alimentos?</h2>
+
+      <section class="section3"> 
+
+        <figure> <!--Imagem com descrição-->
+
+         <img src="Imagens/Página Inicial/Engenheira de Alimentos 4.jpg" onmouseover="this.src='Imagens/Página Inicial/Análise em Tomates Frescos.jpg'" onmouseout="this.src='Imagens/Página Inicial/Engenheira de Alimentos 4.jpg'" alt="Engenheira de Alimentos e Análise em Tomates Frescos" height="300px" width="500px"> <!--Fonte das imagens: Freepik.-->
+         <figcaption>Engenheira de Alimentos. Fonte: FreePik.</figcaption>
+
+        </figure>
+
+        <!--Trecho de texto com plano de fundo colorido-->
+
+        <p class="paragrafo2">O papel fundamental do engenheiro de alimentos é assegurar a qualidade e a segurança alimentar. Para isso, as <a target="_blank" href="https://educacao.rs.gov.br/upload/arquivos/202005/11141300-capacitacao-boas-praticas.pdf">Boas Práticas de Fabricação (BPF)</a> e os <a target="_blank" href="https://www.gov.br/servidor/pt-br/siass/centrais_conteudo/manuais/resolucao-rdc-anvisa-n-275-de-21-de-outubro-de-2002.pdf/view">Procedimentos Operacionais Padrões (POPs)</a> desempenham um papel crucial, pois delineiam as medidas necessárias para manipular alimentos de maneira segura, prevenindo o risco de contaminação por doenças transmitidas por alimentos (DTA).
+         Além disso, análises físico-químicas e microbiológicas são essenciais para verificar a composição química, as propriedades nutricionais, físico-químicas e a presença de microrganismos nos alimentos. Essas análises garantem que os alimentos estejam em conformidade com os padrões estabelecidos pela legislação vigente, assegurando que estejam aptos para o consumo.
+         A engenharia de alimentos é uma profissão que tem um impacto direto na saúde das pessoas e requer comprometimento e seriedade em sua prática. Independentemente da área de atuação, a busca pela qualidade e excelência deve ser sempre prioridade.
+        </p>
+
+      </section>
+      
+      <h2>Ficou curioso(a) sobre o assunto? Saiba mais</h2> 
+
+      <section class="section4"> <!--Vídeo-->
+
+         <iframe height="300" width="500" src="https://www.youtube.com/embed/TZHXQfXdlIw?si=sYOO-WLIGB-tDWhl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br> <!--Iframe-->
+  
+         <div class="btn-section4">
+
+          <ul> <!--Botões de links externos com efeitos-->
+
+           <li class="li-section4"><a class="a-section4" target="_blank" href="https://www.upf.br/_uploads/Conteudo/simposio-sial-anais/2011/ciencia/031.pdf">Importância das Análises Físico-Químicas na Indústria de Alimentos</a></li><br>
+
+           <li class="li-section4"><a class="a-section4" target="_blank" href="https://www.gov.br/anvisa/pt-br/centraisdeconteudo/publicacoes/alimentos/manuais-guias-e-orientacoes/cartilha-boas-praticas-para-servicos-de-alimentacao.pdf">Manual de Boas Práticas - Resolução RDC nº 216</a></li><br>
+
+           <li class="li-section4"><a class="a-section4" target="_blank" href="https://bvsms.saude.gov.br/bvs/publicacoes/manual_integrado_prevencao_doencas_alimentos.pdf">Manual Integrado de Prevenção e Controle de DTA</a></li><br>
+
+           <li class="li-section4"><a class="a-section4" target="_blank" href="https://fundacaocargill.org.br/papel-do-engenheiro-de-alimentos/">O papel do Engenheiro de Alimentos</a></li><br>
+        
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section class="section5"> <!--Cards-->
+
+        <div class="div-section5">
+
+          <div class="card-section5">
+            <div class="img-section5"><img src="Imagens/Página Inicial/Anvisa.jpg"></div> <!--Fonte da Imagem: https://seeklogo.com/vector-logo/9430/anvisa.-->
+            <div class="cardsection5-conteudo">
+              <h2>ANVISA</h2>
+              <p>Qual é o papel da Anvisa na área de alimentos?</p>
+              <a target="_blank" href="https://www.gov.br/anvisa/pt-br/assuntos/alimentos">Saiba mais</a>
+            </div>
+          </div>
+
+          <div class="card-section5">
+            <div class="img-section5"><img src="Imagens/Página Inicial/Engenheiro de Alimentos.jpg" alt="Engenheiro de Alimentos"></div> <!--Fonte da Imagem: Freepik.-->
+            <div class="cardsection5-conteudo">
+              <h2>Food Science</h2>
+              <p>Leia o artigo sobre a evolução da alimentação saudável</p>
+              <a target="_blank" href="https://www.foodconnection.com.br/artigos/food-science-evolucao-que-nos-levou-a-alimentacao-saudavel/">Saiba mais</a>
+            </div>
+          </div>
+
+          <div class="card-section5">
+            <div class="img-section5"><img src="Imagens/Menu/Logo do Site (Canva).png" alt="Símbolo da Engenharia de Alimentos"></div> <!--Fonte da Imagem: Canva. -->
+            <div class="cardsection5-conteudo">
+             <h2>Inovações Tecnológicas</h2>
+             <p>Leia o artigo sobre inovações tecnológicas na indústria de alimentos</p>
+             <a target="_blank" href="https://gestao.ind.br/blog/industria-4-0/industria-de-alimentos-inovacoes-tecnologicas-na-producao-e-distribuicao">Saiba mais</a>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <h2 id="local">São José dos Campos - SP</h2> <!--Local-->
+
+      <section class="section6"> <!--Mapa de localização-->
+  
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117359.0663016085!2d-45.863012749999996!3d-23.189506249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bb3858cc2e7%3A0xba25a33168f8c1!2zU8OjbyBKb3PDqSBkb3MgQ2FtcG9zLCBTUA!5e0!3m2!1spt-BR!2sbr!4v1713219497788!5m2!1spt-BR!2sbr" height="450" width="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!--Iframe-->
+  
+        <figure> <!--Imagem com descrição-->
+  
+         <img src="Imagens/Local/Praça Riugi Kojima.jpg" alt="Praça Riugi Kojima" height="450px" width="600px">
+         <figcaption>Praça Riugi Kojima. Fonte: FreePik.</figcaption>
+     
+        </figure>
+  
+      </section>
+
+      <h2 id="form">Inscreva-se e receba as atualizações do site </h2> <!--Contato-->
+
+      <section class="section7"> <!--Formulário para coletar cadastro-->
+  
+        <div class="form_box">
+  
+          <h2>Formulário de Cadastro</h2>
+  
+          <form action="" method="get"> 
+  
+           <input type="text" name ="nome" placeholder="Seu nome">
+  
+           <input type="email" name="e-mail" placeholder="Seu e-mail">
+  
+           <input type="text" name="assunto" placeholder="Assunto">
+  
+           <textarea name="mensagem" placeholder="Digite sua mensagem"></textarea>
+  
+           <button type="submit">Enviar formulário</button>
+  
+          </form>
+  
+        </div>
+  
+      </section>
+
+    </main>
+
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao Topo"> 
+     <img src="Imagens/Página Inicial/Seta.png" alt="Voltar ao Topo" height="60px" width="60px">
+    </button>
+  
+    <footer class="rodape">Criado por Ana Clara Azevedo<img class="borboleta" src="Imagens/Rodapé/Borboleta Azul.png" alt="Borboleta Azul"></footer> <!--Rodapé com a frase criado por "seunome"-->
+
+    <script src="script.js"></script> <!--JavaScript Externo-->
+
+  </body>
+</html>

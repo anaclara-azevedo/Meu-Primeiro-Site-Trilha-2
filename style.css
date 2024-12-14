@@ -1,0 +1,2295 @@
+
+/* Importação da Fonte Bitter do Google Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilização Universal */
+
+* {
+    box-sizing: border-box;
+    font-family: "Bitter", serif; 
+}
+
+/* Estilização do Plano de Fundo */
+
+body {
+    background-color:#e6e6e6; 
+    display: flex; /* Torna o elemento um contêiner flexível */
+    flex-direction: column; 
+    margin: 0; 
+    min-height: 100vh; /* A altura mínima é 100% da altura da janela de visualização */
+    padding: 0; 
+}
+
+/* Estilização da tag a, do html, da tag iframe e da tag img */
+
+a { 
+    color: rgba(59, 0, 197, 0.911); 
+    font-weight: 400; 
+}
+
+html { 
+    height: 100%; 
+    scroll-behavior: smooth; /* Rolamento da página suave */
+}
+
+iframe, img {
+    border-radius: 8px; 
+}
+
+/* Estilização das Legendas das Imagens */
+   
+figcaption { 
+    font-size: 15px;
+    font-weight: 500; 
+    text-align: center; 
+}
+
+/* Estilização dos Títulos */
+
+h1, h2 {  
+    color: #727272; 
+    text-align: center; 
+}
+
+/* Estilização do Cabeçalho (Linhas 16 a 39) */
+
+.a-menu { 
+    align-items: center;
+    color: #000000; 
+    display: flex; 
+    flex-direction: column; /* Nomes dos ícones fica abaixo deles nessa configuração */
+    font-weight: 400; 
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.a-menu img {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Espaçamento entre imagem e texto */
+}
+
+.cabecalho {
+    background-image: url("Imagens/Página Inicial/Alimentos.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Título destacado) */
+    width: 100%; 
+    /* Estilização do cabeçalho com imagem de fundo */
+    /* Fonte da imagem: Freepik */
+}
+
+.engalimentos {  
+    color: #666060; 
+    font-size: 65px; 
+    font-weight: bolder; 
+    margin-left: 25%; 
+    margin-top: 30px; 
+    padding: 16px;
+    text-align: justify; 
+    width: 100%; 
+    /* Título destacado sobre o assunto do site com imagem de fundo */
+}
+
+.li-menu {
+    list-style: none;
+    margin: 30px;
+    padding: 20px 20px; /* Espaçamento ao redor dos itens do menu de navegação */
+    /* Itens do menu de navegação */
+}
+
+.logo-cabecalho { 
+    cursor: pointer;
+    display: flex;
+    max-height: 70px; 
+    max-width: 70px; 
+    z-index: 10;
+    /* Logotipo do menu de navegação */
+}
+
+.logo-texto {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu { 
+    align-items: center; /* Alinhamento entre Logotipo e os itens do menu de navegação */
+    display: flex; 
+    overflow: visible; /* Nenhum elemento cortado */
+    position: relative; /* Posicionamento do menu dropdown */
+}
+
+.menu-conteiner {
+    align-items: center;
+    display: flex; 
+    flex-direction: column;  
+    margin-left: 150px;
+}
+
+.menu-conteiner img {
+    display: block; /* Remoção do espaço entre Logotipo e frase "Menu" */
+    margin: 0; 
+}
+
+.section1 {
+    position: absolute; /* Posicionamento absoluto para o título ficar dentro dos limites do cabeçalho */
+}
+
+.ul-menu { 
+    display: none; 
+    position: absolute;
+    width: 100%; 
+    /* Lista não ordenada que dispõe os itens do menu de navegação */
+}
+
+.ul-menu.active, .ul-menu.show {
+    display: flex; 
+    justify-content: end;
+    width: 100%;
+}
+
+/* Estilização da Section 2 e Section 3 (Linhas 45 a 88 do arquivo index.html) */
+
+.auto-nav, .manual-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 17%;
+    position: absolute;
+    width: 500px;
+    /* Posicionamento dos botões automáticos e manuais */
+}
+
+.auto-nav div, .manual-nav .manual-btn {
+    cursor: pointer;
+    border: 1px solid #666060;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.4s;
+    /* Estilização dos botões automáticos e manuais */
+}
+
+.auto-nav div:not(:last-child), .manual-nav .manual-btn:not(:last-child) {
+    margin-right: 40px;
+    /* Espaçamento entre os botões automáticos e manuais */
+}
+
+.manual-nav .manual-btn:hover {
+    background-color: #ffffff;
+    /* Pseudoclasse para mudança de cor ao passar o cursor sobre os botões */
+}
+
+.paragrafo1 {
+   margin: auto;
+}
+
+.paragrafo1, .paragrafo2 {
+    font-size: 18px;
+    text-align: justify; 
+    width: 50%; /* Harmonia entre o espaçamento entre as imagens e os trechos de textos */
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1, #radio2:checked ~ .auto-nav .auto-btn2, #radio3:checked ~ .auto-nav .auto-btn3, #radio4:checked ~ .auto-nav .auto-btn4 {
+    background-color: #e6e6e6;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+    /* Define a margem esquerda como 0% para a primeira imagem */
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%; 
+    /* Move a imagem para a esquerda em 25%, mostrando a segunda imagem */
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+    /* Move a imagem para a esquerda em 50%, mostrando a terceira imagem */
+}
+
+#radio4:checked ~ .primeiro {
+    margin-left: -75%;
+    /* Move a imagem para a esquerda em 75%, mostrando a quarta imagem */
+}
+
+.section2 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3 { 
+    align-items: flex-start; /* Elementos bem dispostos nessa configuração */
+    display: flex; 
+    justify-content: center;  
+}
+
+section.slider {
+    display: flex;
+    height: auto;
+    margin-left: 90px;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 500px;
+    /* Section que contém o carrossel de imagens */
+}
+
+.slide {
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1.5s;
+    width: 25%;
+    /* Divs que contêm as imagens do carrossel */
+}
+
+.slide img {
+    height: 260px;
+    width: 500px;
+    /* Imagens do carrossel */
+}
+
+.slides { 
+    display: flex;
+    height: auto;
+    width: 400%;
+    /* Div que contém os botões automáticos e as imagens do carrossel */
+}
+
+.slides input {
+    display:none;
+}
+
+/* Estilização da Section 4 (Linhas 121 a 141 do arquivo index.html) */
+
+.a-section4 {  
+    color: #fcfcfc;  
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.btn-section4 { 
+    margin-left: 25px; /* Espaçamento uniforme entre botões com links externos e o vídeo */ 
+}
+
+.li-section4 { 
+    background-color: #464545; 
+    border-radius: 8px;  
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    font-size: 19px; 
+    list-style: none; 
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center; 
+    /* Estilização dos botões com links externos dispostos em lista */
+}
+
+.li-section4:hover {
+    background-color: #727272; 
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Troca a cor de fundo ao passar o cursor sobre os botões */
+}
+
+.section4 { 
+    display: flex; 
+    margin-left: 90px;  
+    margin-top: 40px;
+}
+
+/* Estilização da Section 5 que contém os Cards (Linhas 143 a 176 do arquivo index.html) */
+
+.div-section5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    justify-content: center;
+    padding: 100px 50px;
+    position: relative;
+    /* Estilização da div que contém os cards da Section 5 */
+}
+
+.div-section5 .card-section5 {
+    align-items: flex-start;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 35px 80px #464545;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    transition: 0.5s;
+    width: 350px;
+    /* Estilização dos Cards */
+}
+
+.div-section5 .card-section5:hover {
+    height: 400px;
+}
+
+.div-section5 .card-section5 .img-section5 {
+    background: #727272;
+    border-radius: 8px;
+    height: 245px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    transition: 0.5s;
+    width: 300px;
+    /* Estilização das divs que contêm as imagens dos cards */
+}
+
+.div-section5 .card-section5:hover .img-section5 {
+    box-shadow: 0 15px 45px #727272;
+    scale: 0.75;
+    top: -100px;
+}
+
+.div-section5 .card-section5 .img-section5 img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Imagens dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo {
+    height: 50px;
+    overflow: hidden;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    top: 252px;
+    transition: 0.5s;
+    width: 100%;
+    /* Divs que contêm os títulos e os conteúdos dos cards */
+}
+
+.div-section5 .card-section5:hover .cardsection5-conteudo {
+    height: 250px;
+    top: 130px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo h2 {
+    color: #727272;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Títulos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo p { 
+    color: #464545;
+    font-size: 18px;
+    /* Conteúdos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a {
+    background: #464545;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    color: #fff;
+    display: inline-block;
+    font-size: 18px; 
+    font-weight: 500;
+    padding: 12px 25px;
+    position: relative;
+    text-decoration: none;
+    top: 15px;
+    /* Botão "Saiba Mais" */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a:hover {
+    background-color: #727272;
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Pseudoclasse para mudança de cor ao passar o cursor sobre o botão "Saiba Mais" */
+}
+
+/* Estilização da Section 6 (Linhas 180 a 191 do arquivo index.html) */
+
+#local {
+    scroll-behavior: smooth;
+}
+
+.section6 { 
+    align-items: baseline; 
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+/* Estilização da Section 7 (Linhas 195 a 217 do arquivo index.html)*/
+
+#form {
+    scroll-behavior: smooth;
+}
+
+.form_box { 
+    background-color: #fcfcfc; 
+    border-radius: 8%; 
+    display: flex;
+    height: 470px;  
+    flex-direction: column;  
+    padding: 15px; 
+    width: 700px; 
+    /* Estrutura (Caixa) que contém os elementos do formulário */
+}
+ 
+.form_box button { 
+    background-color: #727272; 
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px #000000; 
+    color: #fffcfc; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: block; 
+    font-size: 16px; 
+    font-weight: bold; 
+    height: 40px; 
+    margin-left: 478px; 
+    margin-top: 55%; 
+    outline: none; 
+    position: absolute; /* Posicionamento absoluto para o botão ficar dentro dos limites do formulário */
+    width: 180px; 
+    /* Botão "Enviar formulário" */
+}
+
+.form_box button:hover { /* Troca a cor de fundo ao passar o cursor sobre o botão */
+    background-color: #464545; 
+}
+
+.form_box form {
+    align-items: center; 
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Botão do formulário) */ 
+    /* Linha 211 */
+}
+ 
+.form_box input, .form_box textarea {
+    border: thin solide #cccc; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    height: 40px; 
+    margin: 12px; 
+    padding-left: 16px; 
+    width: calc(50% -8px); 
+    /* Elementos do formulário */
+}
+git init 
+.form_box input:first-child { 
+    margin-right: 16px; 
+}
+
+.form_box input[name=assunto] { 
+    width: 100%; 
+}
+
+.form_box input[name=nome], .form_box input[name=e-mail] {   
+    width: 308px; 
+}
+
+.form_box textarea { 
+    height: 180px; 
+    margin: 12px; 
+    padding: 16px; 
+    width: 100%;
+}
+
+.section7 { 
+    align-items: center; 
+    display: flex; 
+    height: 100%; 
+    justify-content: center; 
+    padding: 20px;  
+    width: 100%; 
+    /* Section que contém o formulário */
+}
+
+/* Botão voltar ao topo (Javascript) */
+
+#btnTopo {   
+    bottom: 20px; 
+    background-color: #e6e6e6; 
+    border-color: #727272; 
+    border-style: solid; 
+    border-radius: 8px; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: none; 
+    position: fixed; 
+    right: 20px; 
+    z-index: 99; 
+}
+
+/* Estilização do Rodapé */
+
+.borboleta { 
+    height: 30px; 
+    width: 30px; 
+    /* Fonte do ícone: https://www.flaticon.com/br/icone-gratis/borboleta_338337?term=borboleta+azul&page=1&position=1&origin=search&related_id=338337 */
+}
+
+.rodape {
+    align-items: center; 
+    color: #000000;
+    display: flex;
+    font-size: 21px; 
+    font-weight: 500; 
+    gap: 10px; /* Lacuna entre a imagem do rodapé (Borboleta) e o nome */
+    justify-content: center;  
+    margin-top: auto; /* Rodapé no fim da página */
+    padding-top: 30px; 
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+ 
+/* Estilização do Plano de Fundo */
+
+body {
+    background-color:#e6e6e6; 
+    display: flex; /* Torna o elemento um contêiner flexível */
+    margin: 0; 
+    min-height: 100vh; /* A altura mínima é 100% da altura da janela de visualização */
+    padding: 0; 
+}
+
+/* Estilização da tag a, do html, da tag iframe e da tag img */
+
+a { 
+    color: rgba(59, 0, 197, 0.911); 
+    font-weight: 400; 
+}
+
+html { 
+    height: 100%; 
+    scroll-behavior: smooth; /* Rolamento da página suave */
+}
+
+iframe, img {
+    border-radius: 8px; 
+}
+
+/* Estilização das Legendas das Imagens */
+   
+figcaption { 
+    font-size: 13px;
+    font-weight: 500; 
+    text-align: center; 
+}
+
+/* Estilização dos Títulos */
+
+h1, h2 {  
+    color: #727272; 
+    text-align: center; 
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* Estilização do Cabeçalho */
+
+.a-menu { 
+    align-items: center;
+    color: #000000; 
+    display: flex; 
+    flex-direction: column; /* Nomes dos ícones fica abaixo deles nessa configuração */
+    font-size: 12px;
+    font-weight: 400; 
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.a-menu img {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Espaçamento entre imagem e texto */
+    margin-top: 20px;
+}
+
+.cabecalho {
+    background-image: url("Imagens/Página Inicial/Alimentos.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Título destacado) */
+    width: 100%; 
+    /* Estilização do cabeçalho com imagem de fundo */
+    /* Fonte da imagem: Freepik */
+}
+
+.engalimentos {  
+    color: #666060; 
+    font-size: 50px; 
+    font-weight: bolder;
+    margin-top: 5%;
+    text-align: center;
+    width: 100%; 
+    /* Título destacado sobre o assunto do site com imagem de fundo */
+}
+
+.li-menu {
+    list-style: none;
+    margin: 30px;
+    padding: 20px 20px; /* Espaçamento ao redor dos itens do menu de navegação */
+    /* Itens do menu de navegação */
+}
+
+.li-menu img {
+    height: 40px;
+    width: 40px;
+}
+
+.logo-cabecalho { 
+    cursor: pointer;
+    display: flex;
+    max-height: 55px; 
+    max-width: 55px; 
+    z-index: 10;
+    /* Logotipo do menu de navegação */
+}
+
+.logo-texto {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu { 
+    align-items: center; /* Alinhamento entre Logotipo e os itens do menu de navegação */
+    display: flex; 
+    margin: auto;
+    overflow: visible; /* Nenhum elemento cortado */
+    position: relative; /* Posicionamento do menu dropdown */
+}
+
+.menu-conteiner {
+    align-items: center;
+    display: flex; 
+    flex-direction: column;  
+    margin-right: 30px;
+}
+
+.menu-conteiner img {
+    display: block; /* Remoção do espaço entre Logotipo e frase "Menu" */
+    margin: 0; 
+}
+
+.section1 {
+    position: absolute; /* Posicionamento absoluto para o título ficar dentro dos limites do cabeçalho */
+}
+
+.ul-menu { 
+    display: none; 
+    position: absolute;
+    width: 100%; 
+    /* Lista não ordenada que dispõe os itens do menu de navegação */
+}
+
+.ul-menu.active, .ul-menu.show {
+    display: flex; 
+    justify-content: end;
+    width: 100%;
+}
+
+/* Estilização da Section 2 e Section 3 */
+
+.auto-nav, .manual-nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    position: absolute;
+    width: 450px;
+}
+
+.auto-nav div, .manual-nav .manual-btn {
+    cursor: pointer;
+    border: 1px solid #666060;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.auto-nav div:not(:last-child), .manual-nav .manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+#h2-section2 {
+    margin-bottom: 25px;
+    margin-top: 3%;
+}
+
+.manual-nav .manual-btn:hover {
+    background-color: #ffffff;
+}
+
+.paragrafo1 {
+    margin-top: 30px;
+}
+
+.paragrafo1, .paragrafo2 {
+    font-size: 15px;
+    text-align: justify; 
+    width: 90%; /* Harmonia entre o espaçamento entre as imagens e os trechos de textos */
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1, #radio2:checked ~ .auto-nav .auto-btn2, #radio3:checked ~ .auto-nav .auto-btn3, #radio4:checked ~ .auto-nav .auto-btn4 {
+    background-color: #e6e6e6;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .primeiro {
+    margin-left: -75%;
+}
+
+.section2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 { 
+    align-items: center; /* Elementos bem dispostos nessa configuração */
+    display: flex; 
+    flex-direction: column;
+}
+
+.section3 img {
+    height: 280px;
+    width: 450px;
+}
+
+section.slider {
+    display: flex;
+    height: auto;
+    margin: auto auto auto auto;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 450px;
+}
+
+.slide {
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1.5s;
+    width: 25%;
+}
+
+.slide img {
+    height: 234px;
+    width: 450px;
+}
+
+.slides { 
+    display: flex;
+    height: auto;
+    width: 400%;
+}
+
+.slides input {
+    display:none;
+}
+
+/* Estilização da Section 4 */
+
+.a-section4 {  
+    color: #fcfcfc;  
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.btn-section4 {
+    margin-right: 40px;
+}
+
+.li-section4 { 
+    align-items: center;
+    background-color: #464545; 
+    border-radius: 8px;  
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    display: flex;
+    font-size: 12px; 
+    height: 40px;
+    justify-content: center;
+    list-style: none; 
+    text-align: justify;
+    /* Estilização dos botões com links externos dispostos em lista */
+}
+
+.li-section4:hover {
+    background-color: #727272; 
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Troca a cor de fundo ao passar o cursor sobre os botões */
+}
+
+.section4 { 
+    align-items: center;
+    display: flex; 
+    justify-content: center;    
+}
+
+.section4 iframe, .section4 img { 
+    height: 300px;
+    width: 400px;
+}
+
+/* Estilização da Section 5 que contém os Cards */
+
+.div-section5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    justify-content: center;
+    padding: 100px 50px;
+    position: relative;
+    /* Estilização da div que contém os cards da Section 5 */
+}
+
+.div-section5 .card-section5 {
+    align-items: flex-start;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 35px 80px #464545;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    transition: 0.5s;
+    width: 350px;
+    /* Estilização dos Cards */
+}
+
+.div-section5 .card-section5:hover {
+    height: 400px;
+}
+
+.div-section5 .card-section5 .img-section5 {
+    background: #727272;
+    border-radius: 8px;
+    height: 245px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    transition: 0.5s;
+    width: 300px;
+    /* Estilização das divs que contêm as imagens dos cards */
+}
+
+.div-section5 .card-section5:hover .img-section5 {
+    box-shadow: 0 15px 45px #727272;
+    scale: 0.75;
+    top: -100px;
+}
+
+.div-section5 .card-section5 .img-section5 img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Imagens dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo {
+    height: 50px;
+    overflow: hidden;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    top: 252px;
+    transition: 0.5s;
+    width: 100%;
+    /* Divs que contêm os títulos e os conteúdos dos cards */
+}
+
+.div-section5 .card-section5:hover .cardsection5-conteudo {
+    height: 250px;
+    top: 130px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo h2 {
+    color: #727272;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Títulos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo p { 
+    color: #464545;
+    font-size: 18px;
+    /* Conteúdos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a {
+    background: #464545;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    color: #fff;
+    display: inline-block;
+    font-size: 18px; 
+    font-weight: 500;
+    padding: 12px 25px;
+    position: relative;
+    text-decoration: none;
+    top: 15px;
+    /* Botão "Saiba Mais" */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a:hover {
+    background-color: #727272;
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Pseudoclasse para mudança de cor ao passar o cursor sobre o botão "Saiba Mais" */
+}
+
+.div-section5 .card-section5:first-child, .div-section5 .card-section5:last-child {
+    display:none;
+}
+
+.section5 {
+    height: auto;
+    width: 100%;
+}
+
+/* Estilização da Section 6 */
+
+#local {
+    font-size: 30px;
+    margin-top: 0;
+    scroll-behavior: smooth;
+}
+
+.section6 { 
+    align-items: baseline;
+    display: flex;
+    gap: 20px;
+}
+
+.section6 img, .section6 iframe {
+    height: 300px;
+    width: 400px;
+}
+
+/* Estilização da Section 7 */
+
+#form {
+    scroll-behavior: smooth;
+}
+
+.form_box { 
+    background-color: #fcfcfc; 
+    border-radius: 8%; 
+    display: flex;
+    height: 470px;  
+    flex-direction: column;  
+    padding: 15px; 
+    width: 700px; 
+    /* Estrutura (Caixa) que contém os elementos do formulário */
+}
+ 
+.form_box button { 
+    background-color: #727272; 
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px #000000; 
+    color: #fffcfc; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: block; 
+    font-size: 16px; 
+    font-weight: bold; 
+    height: 40px; 
+    margin-left: 478px; 
+    margin-top: 57%; 
+    outline: none; 
+    position: absolute; /* Posicionamento absoluto para o botão ficar dentro dos limites do formulário */
+    width: 180px; 
+    /* Botão "Enviar formulário" */
+}
+
+.form_box button:hover { /* Troca a cor de fundo ao passar o cursor sobre o botão */
+    background-color: #464545; 
+}
+
+.form_box form {
+    align-items: center; 
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Botão do formulário) */ 
+}
+ 
+.form_box input, .form_box textarea {
+    border: thin solide #cccc; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    height: 40px; 
+    margin: 12px; 
+    padding-left: 16px; 
+    width: calc(50% -8px); 
+    /* Elementos do formulário */
+}
+
+.form_box input:first-child { 
+    margin-right: 16px; 
+}
+
+.form_box input[name=assunto] { 
+    width: 100%; 
+}
+
+.form_box input[name=nome], .form_box input[name=e-mail] {   
+    width: 308px; 
+}
+
+.form_box textarea { 
+    height: 180px; 
+    margin: 12px; 
+    padding: 16px; 
+    width: 100%;
+}
+
+.section7 { 
+    align-items: center; 
+    display: flex; 
+    height: 100%; 
+    justify-content: center; 
+    padding: 20px;  
+    width: 100%; 
+    /* Section que contém o formulário */
+}
+
+/* Botão voltar ao topo (Javascript) */
+
+#btnTopo {   
+    bottom: 20px; 
+    background-color: #e6e6e6; 
+    border-color: #727272; 
+    border-style: solid; 
+    border-radius: 8px; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: none; 
+    height: 60px;
+    position: fixed; 
+    right: 20px;
+    width: 60px;
+    z-index: 99; 
+}
+
+#btnTopo img {
+    bottom: 20px;    
+    height: 60px;
+    position: fixed; 
+    right: 20px;
+    width: 60px;
+}
+
+/* Estilização do Rodapé */
+
+.borboleta { 
+    height: 25px; 
+    width: 25px; 
+    /* Fonte do ícone: https://www.flaticon.com/br/icone-gratis/borboleta_338337?term=borboleta+azul&page=1&position=1&origin=search&related_id=338337 */
+}
+
+.rodape {
+    align-items: center; 
+    color: #000000;
+    display: flex;
+    font-size: 18px; 
+    font-weight: 500; 
+    gap: 10px; /* Lacuna entre a imagem do rodapé (Borboleta) e o nome */
+    justify-content: center;  
+    margin-top: auto; /* Rodapé no fim da página */
+    padding-top: 30px; 
+    text-align: center;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+/* Estilização do Plano de Fundo */
+
+body {
+    background-color:#e6e6e6; 
+    display: flex; /* Torna o elemento um contêiner flexível */
+    margin: 0; 
+    min-height: 100vh; /* A altura mínima é 100% da altura da janela de visualização */
+    padding: 0; 
+}
+
+/* Estilização da tag a, do html, da tag iframe e da tag img */
+
+a { 
+    color: rgba(59, 0, 197, 0.911); 
+    font-weight: 400; 
+}
+
+html { 
+    height: 100%; 
+    scroll-behavior: smooth; /* Rolamento da página suave */
+}
+
+iframe, img {
+    border-radius: 8px; 
+}
+
+/* Estilização das Legendas das Imagens */
+   
+figcaption { 
+    font-size: 13px;
+    font-weight: 500; 
+    text-align: center; 
+}
+
+/* Estilização dos Títulos */
+
+h1, h2 {  
+    color: #727272; 
+    text-align: center; 
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* Estilização do Cabeçalho */
+
+.a-menu { 
+    align-items: center;
+    color: #000000; 
+    display: flex; 
+    flex-direction: column; /* Nomes dos ícones fica abaixo deles nessa configuração */
+    font-size: 12px;
+    font-weight: 400; 
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.a-menu img {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Espaçamento entre imagem e texto */
+    margin-top: 20px;
+}
+
+.cabecalho {
+    background-image: url("Imagens/Página Inicial/Alimentos.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Título destacado) */
+    width: 100%; 
+    /* Estilização do cabeçalho com imagem de fundo */
+    /* Fonte da imagem: Freepik */
+}
+
+.engalimentos {  
+    color: #666060; 
+    font-size: 40px; 
+    font-weight: bolder;
+    margin-left: 60px;
+    margin-top: 10%;
+    text-align: center;
+    width: 100%; 
+    /* Título destacado sobre o assunto do site com imagem de fundo */
+}
+
+.li-menu {
+    list-style: none;
+    margin: 30px;
+    padding: 10px 10px; /* Espaçamento ao redor dos itens do menu de navegação */
+    /* Itens do menu de navegação */
+}
+
+.li-menu img {
+    height: 40px;
+    width: 40px;
+}
+
+.logo-cabecalho { 
+    cursor: pointer;
+    display: flex;
+    max-height: 55px; 
+    max-width: 55px; 
+    z-index: 10;
+    /* Logotipo do menu de navegação */
+}
+
+.logo-texto {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu { 
+    align-items: center; /* Alinhamento entre Logotipo e os itens do menu de navegação */
+    display: flex; 
+    margin: auto;
+    overflow: visible; /* Nenhum elemento cortado */
+    position: relative; /* Posicionamento do menu dropdown */
+}
+
+.menu-conteiner {
+    align-items: center;
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 100px; 
+}
+
+.menu-conteiner img {
+    display: block; /* Remoção do espaço entre Logotipo e frase "Menu" */
+    margin: 0; 
+}
+
+.section1 {
+    position: absolute; /* Posicionamento absoluto para o título ficar dentro dos limites do cabeçalho */
+}
+
+.ul-menu { 
+    display: none; 
+    position: absolute;
+    width: 100%; 
+    /* Lista não ordenada que dispõe os itens do menu de navegação */
+}
+
+.ul-menu.active, .ul-menu.show {
+    display: flex; 
+    justify-content: end;
+    width: 100%;
+}
+
+/* Estilização da Section 2 e Section 3 */
+
+.auto-nav, .manual-nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 27%;
+    position: absolute;
+    width: 450px;
+}
+
+.auto-nav div, .manual-nav .manual-btn {
+    cursor: pointer;
+    border: 1px solid #666060;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.auto-nav div:not(:last-child), .manual-nav .manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+#h2-section2 {
+    margin-bottom: 25px;
+    margin-top: 5%;
+}
+
+.manual-nav .manual-btn:hover {
+    background-color: #ffffff;
+}
+
+.paragrafo1 {
+    margin-top: 30px;
+}
+
+.paragrafo1, .paragrafo2 {
+    font-size: 15px;
+    text-align: justify; 
+    width: 90%; /* Harmonia entre o espaçamento entre as imagens e os trechos de textos */
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1, #radio2:checked ~ .auto-nav .auto-btn2, #radio3:checked ~ .auto-nav .auto-btn3, #radio4:checked ~ .auto-nav .auto-btn4 {
+    background-color: #e6e6e6;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .primeiro {
+    margin-left: -75%;
+}
+
+.section2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 { 
+    align-items: center; /* Elementos bem dispostos nessa configuração */
+    display: flex; 
+    flex-direction: column;
+}
+
+.section3 img {
+    height: 280px;
+    width: 450px;
+}
+
+section.slider {
+    display: flex;
+    height: auto;
+    margin: auto auto auto auto;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 450px;
+}
+
+.slide {
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1.5s;
+    width: 25%;
+}
+
+.slide img {
+    height: 234px;
+    width: 450px;
+}
+
+.slides { 
+    display: flex;
+    height: auto;
+    width: 400%;
+}
+
+.slides input {
+    display:none;
+}
+
+/* Estilização da Section 4 */
+
+.a-section4 {  
+    color: #fcfcfc;  
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.btn-section4 {
+    margin-right: 40px;
+}
+
+.li-section4 { 
+    align-items: center;
+    background-color: #464545; 
+    border-radius: 8px;  
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    display: flex;
+    font-size: 12px; 
+    height: 40px;
+    justify-content: center;
+    list-style: none; 
+    text-align: justify;
+    /* Estilização dos botões com links externos dispostos em lista */
+}
+
+.li-section4:hover { 
+    background-color: #727272; 
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Troca a cor de fundo ao passar o cursor sobre os botões */
+}
+
+.section4 { 
+    align-items: center;
+    display: flex; 
+    justify-content: center;    
+}
+
+.section4 iframe, .section4 img { 
+    height: 300px;
+    width: 400px;
+}
+
+/* Estilização da Section 5 que contém os Cards */
+
+.div-section5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    justify-content: center;
+    padding: 100px 50px;
+    position: relative;
+    /* Estilização da div que contém os cards da Section 5 */
+}
+
+.div-section5 .card-section5 {
+    align-items: flex-start;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 35px 80px #464545;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    transition: 0.5s;
+    width: 350px;
+    /* Estilização dos Cards */
+}
+
+.div-section5 .card-section5:hover {
+    height: 400px;
+}
+
+.div-section5 .card-section5 .img-section5 {
+    background: #727272;
+    border-radius: 8px;
+    height: 245px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    transition: 0.5s;
+    width: 300px;
+    /* Estilização das divs que contêm as imagens dos cards */
+}
+
+.div-section5 .card-section5:hover .img-section5 {
+    box-shadow: 0 15px 45px #727272;
+    scale: 0.75;
+    top: -100px;
+}
+
+.div-section5 .card-section5 .img-section5 img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Imagens dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo {
+    height: 50px;
+    overflow: hidden;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    top: 252px;
+    transition: 0.5s;
+    width: 100%;
+    /* Divs que contêm os títulos e os conteúdos dos cards */
+}
+
+.div-section5 .card-section5:hover .cardsection5-conteudo {
+    height: 250px;
+    top: 130px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo h2 {
+    color: #727272;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Títulos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo p { 
+    color: #464545;
+    font-size: 18px;
+    /* Conteúdos dos cards */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a {
+    background: #464545;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    color: #fff;
+    display: inline-block;
+    font-size: 18px; 
+    font-weight: 500;
+    padding: 12px 25px;
+    position: relative;
+    text-decoration: none;
+    top: 15px;
+    /* Botão "Saiba Mais" */
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a:hover {
+    background-color: #727272;
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Pseudoclasse para mudança de cor ao passar o cursor sobre o botão "Saiba Mais" */
+}
+
+.div-section5 .card-section5:first-child, .div-section5 .card-section5:last-child {
+    display:none;
+}
+
+.section5 {
+    height: auto;
+    width: 100%;
+}
+
+/* Estilização da Section 6 */
+
+#local {
+    font-size: 30px;
+    margin-top: 0;
+    scroll-behavior: smooth;
+}
+
+.section6 { 
+    align-items: baseline;
+    display: flex;
+    gap: 20px;
+}
+
+.section6 img, .section6 iframe {
+    height: 250px;
+    width: 300px;
+}
+
+/* Estilização da Section 7 */
+
+#form {
+    scroll-behavior: smooth;
+}
+
+.form_box { 
+    background-color: #fcfcfc; 
+    border-radius: 8%; 
+    display: flex;
+    height: 440px;  
+    flex-direction: column;  
+    padding: 10px; 
+    width: 500px; 
+    /* Estrutura (Caixa) que contém os elementos do formulário */
+}
+ 
+.form_box button { 
+    background-color: #727272; 
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px #000000; 
+    color: #fffcfc; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: block; 
+    font-size: 16px; 
+    font-weight: bold; 
+    height: 40px; 
+    margin-left: 285px; 
+    margin-top: 75%; 
+    outline: none; 
+    position: absolute; /* Posicionamento absoluto para o botão ficar dentro dos limites do formulário */
+    width: 180px; 
+    /* Botão "Enviar formulário" */
+}
+
+.form_box button:hover { /* Troca a cor de fundo ao passar o cursor sobre o botão */
+    background-color: #464545; 
+}
+
+.form_box form {
+    align-items: center; 
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Botão do formulário) */ 
+}
+ 
+.form_box input, .form_box textarea {
+    border: thin solide #cccc; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    height: 40px; 
+    margin: 12px; 
+    padding-left: 16px; 
+    width: calc(50% -8px); 
+    /* Elementos do formulário */
+}
+
+.form_box input:first-child { 
+    margin-right: 16px; 
+}
+
+.form_box input[name=assunto] { 
+    width: 100%; 
+}
+
+.form_box input[name=nome], .form_box input[name=e-mail] {   
+    width: 550px; 
+}
+
+.form_box textarea { 
+    height: 100px; 
+    margin: 12px; 
+    padding: 16px; 
+    width: 100%;
+}
+
+.section7 { 
+    align-items: center; 
+    display: flex; 
+    height: 100%; 
+    justify-content: center; 
+    padding: 20px;  
+    width: 100%; 
+    /* Section que contém o formulário */
+}
+
+/* Botão voltar ao topo (Javascript) */
+
+#btnTopo {   
+    bottom: 10px; 
+    background-color: #e6e6e6; 
+    border-color: #727272; 
+    border-style: solid; 
+    border-radius: 8px; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: none; 
+    height: 55px;
+    position: fixed; 
+    right: 20px;
+    width: 55px;
+    z-index: 99; 
+}
+
+#btnTopo img {
+    bottom: 10px;    
+    height: 55px;
+    position: fixed; 
+    right: 20px;
+    width: 55px;
+}
+
+/* Estilização do Rodapé */
+
+.borboleta { 
+    height: 25px; 
+    width: 25px; 
+    /* Fonte do ícone: https://www.flaticon.com/br/icone-gratis/borboleta_338337?term=borboleta+azul&page=1&position=1&origin=search&related_id=338337 */
+}
+
+.rodape {
+    align-items: center; 
+    color: #000000;
+    display: flex;
+    font-size: 18px; 
+    font-weight: 500; 
+    gap: 10px; /* Lacuna entre a imagem do rodapé (Borboleta) e o nome */
+    justify-content: center;  
+    margin-top: auto; /* Rodapé no fim da página */
+    padding-top: 30px; 
+    text-align: center;
+}
+
+}
+
+/* Celular */
+
+@media (max-width: 480px) {
+ 
+/* Estilização do Plano de Fundo */
+
+body {
+    background-color:#e6e6e6; 
+    display: flex; /* Torna o elemento um contêiner flexível */
+    margin: 0; 
+    min-height: 100vh; /* A altura mínima é 100% da altura da janela de visualização */
+    padding: 0; 
+}
+
+/* Estilização da tag a, do html, da tag iframe e da tag img */
+
+a { 
+    color: rgba(59, 0, 197, 0.911); 
+    font-weight: 400; 
+}
+
+html { 
+    height: 100%; 
+    scroll-behavior: smooth; /* Rolamento da página suave */
+}
+
+iframe, img {
+    border-radius: 8px; 
+}
+
+/* Estilização das Legendas das Imagens */
+   
+figcaption { 
+    font-size: 13px;
+    font-weight: 500; 
+    text-align: center; 
+}
+
+/* Estilização dos Títulos */
+
+h1, h2 {  
+    color: #727272; 
+    text-align: center; 
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* Estilização do Cabeçalho */
+
+.a-menu { 
+    align-items: center;
+    color: #000000; 
+    display: flex; 
+    flex-direction: column; /* Nomes dos ícones fica abaixo deles nessa configuração */
+    font-size: 10px;
+    font-weight: 400; 
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.a-menu img {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Espaçamento entre imagem e texto */
+    margin-top: 10px;
+}
+
+.cabecalho {
+    background-image: url("Imagens/Página Inicial/Alimentos.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 60vh; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Título destacado) */
+    width: 100%; 
+    /* Estilização do cabeçalho com imagem de fundo */
+    /* Fonte da imagem: Freepik */
+}
+
+.engalimentos {  
+    color: #666060; 
+    font-size: 20px; 
+    font-weight: bolder;
+    margin-top: 0%;
+    margin-left: 35%;
+    text-align: center;
+    width: 100%; 
+    /* Título destacado sobre o assunto do site com imagem de fundo */
+}
+
+.li-menu {
+    list-style: none;
+    margin: 30px;
+    padding: 1px 1px; /* Espaçamento ao redor dos itens do menu de navegação */
+    /* Itens do menu de navegação */
+}
+
+.li-menu img {
+    height: 30px;
+    width: 30px;
+}
+
+.logo-cabecalho { 
+    cursor: pointer;
+    display: flex;
+    max-height: 40px; 
+    max-width: 40px; 
+    z-index: 10;
+    /* Logotipo do menu de navegação */
+}
+
+.logo-texto {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu { 
+    align-items: center; /* Alinhamento entre Logotipo e os itens do menu de navegação */
+    display: flex; 
+    margin: auto;
+    overflow: visible; /* Nenhum elemento cortado */
+    position: relative; /* Posicionamento do menu dropdown */
+}
+
+.menu-conteiner {
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.menu-conteiner img {
+    display: block; /* Remoção do espaço entre Logotipo e frase "Menu" */
+    margin: 0; 
+}
+
+.section1 {
+    position: absolute; /* Posicionamento absoluto para o título ficar dentro dos limites do cabeçalho */
+}
+
+.ul-menu { 
+    display: none; 
+    position: absolute;
+    width: 100%; 
+    /* Lista não ordenada que dispõe os itens do menu de navegação */
+}
+
+.ul-menu.active, .ul-menu.show {
+    display: flex; 
+    justify-content: end;
+    width: 100%;
+}
+
+/* Estilização da Section 2 e Section 3 */
+
+.auto-nav, .manual-nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 43%;
+    position: absolute;
+    width: 400px;
+}
+
+.auto-nav div, .manual-nav .manual-btn {
+    cursor: pointer;
+    border: 1px solid #666060;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.auto-nav div:not(:last-child), .manual-nav .manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+#h2-section2 {
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+.manual-nav .manual-btn:hover {
+    background-color: #ffffff;
+}
+
+.paragrafo1 {
+    margin-top: 25px;
+}
+
+.paragrafo1, .paragrafo2 {
+    font-size: 15px;
+    text-align: justify; 
+    width: 85%; /* Harmonia entre o espaçamento entre as imagens e os trechos de textos */
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1, #radio2:checked ~ .auto-nav .auto-btn2, #radio3:checked ~ .auto-nav .auto-btn3, #radio4:checked ~ .auto-nav .auto-btn4 {
+    background-color: #e6e6e6;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .primeiro {
+    margin-left: -75%;
+}
+
+.section2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section3 { 
+    align-items: center; /* Elementos bem dispostos nessa configuração */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  
+}
+
+.section3 img {
+    height: 230px;
+    width: 400px;
+}
+
+section.slider {
+    display: flex;
+    height: auto;
+    margin: auto auto auto auto;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 400px;
+}
+
+.slide {
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1.5s;
+    width: 25%;
+}
+
+.slide img {
+    height: 234px;
+    width: 450px;
+}
+
+.slides { 
+    display: flex;
+    height: auto;
+    width: 400%;
+}
+
+.slides input {
+    display:  none;
+}
+
+/* Estilização da Section 4 */
+
+.a-section4 {  
+    color: #fcfcfc; 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.btn-section4 {
+    margin-right: 40px;
+}
+
+.li-section4 { 
+    background-color: #464545; 
+    border-radius: 8px;  
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    font-size: 12px; 
+    height: 40px;
+    list-style: none; 
+    text-align: center;
+    width: 90%;
+    /* Estilização dos botões com links externos dispostos em lista */
+}
+
+.li-section4:hover { 
+    background-color: #727272; 
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+    /* Troca a cor de fundo ao passar o cursor sobre os botões */
+}
+
+.section4 { 
+    display: flex; 
+    flex-direction: column;
+    margin-left: 3px;
+}
+
+.section4 iframe { 
+    height: 300px;
+    width: 400px;
+}
+
+/* Estilização da Section 5 que contém os Cards */
+
+.div-section5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 100px 50px;
+    justify-content: center;
+    padding: 100px 50px;
+    position: relative;
+}
+
+.div-section5 .card-section5 {
+    align-items: flex-start;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 35px 80px #464545;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    transition: 0.5s;
+    width: 200px;
+}
+
+.div-section5 .card-section5:hover {
+    height: 200px;
+}
+
+.div-section5 .card-section5 .img-section5 {
+    background: #727272;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+    transition: 0.5s;
+    width: 150px;
+}
+
+.div-section5 .card-section5:hover .img-section5 {
+    box-shadow: 0 15px 45px #727272;
+    scale: 0.75;
+    top: -100px;
+}
+
+.div-section5 .card-section5 .img-section5 img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo {
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0 30px;
+    text-align: center;
+    top: 170px;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.div-section5 .card-section5:hover .cardsection5-conteudo {
+    height: 250px;
+    top: 12px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo h2 {
+    color: #727272;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo p {
+    color: #464545;
+    font-size: 13px; 
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a {
+    background: #464545;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000000; /* Sombreamento das bordas dos botões */
+    color: #fff;
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: 500;
+    padding: 10px px;
+    position: relative;
+    text-decoration: none;
+    top: 5px;
+}
+
+.div-section5 .card-section5 .cardsection5-conteudo a:hover {
+    background-color: #727272;
+    border-radius: 0%;
+    box-shadow: 0 0 10px 0 gray inset, 0 0 10px 4px gray;
+}
+
+/* Estilização da Section 6 */
+
+#local {
+    font-size: 30px;
+    margin-top: 0;
+    scroll-behavior: smooth;
+}
+
+.section6 { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto auto auto auto;
+}
+
+.section6 iframe, .section6 img {
+    height: 300px;
+    width: 400px;
+}
+
+/* Estilização da Section 7 */
+
+#form {
+    font-size: 22px;
+    scroll-behavior: smooth;
+}
+
+.form_box { 
+    background-color: #fcfcfc; 
+    border-radius: 8%; 
+    display: flex;
+    height: 360px;  
+    flex-direction: column;  
+    width: 400px; 
+    /* Estrutura (Caixa) que contém os elementos do formulário */
+}
+ 
+.form_box button { 
+    background-color: #727272; 
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px #000000; 
+    color: #fffcfc; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: block; 
+    font-size: 13px; 
+    font-weight: bold; 
+    height: 30px; 
+    margin-left: 185px; 
+    margin-top: 73%; 
+    outline: none; 
+    position: absolute; /* Posicionamento absoluto para o botão ficar dentro dos limites do formulário */
+    width: 180px; 
+    /* Botão "Enviar formulário" */
+}
+
+.form_box button:hover { /* Troca a cor de fundo ao passar o cursor sobre o botão */
+    background-color: #464545; 
+}
+
+.form_box form {
+    align-items: center; 
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative; /* Posicionamento relativo para conteúdo interno (Botão do formulário) */ 
+}
+ 
+.form_box input, .form_box textarea {
+    border: thin solide #cccc; 
+    border-radius: 8px; 
+    font-size: 13px; 
+    height: 30px; 
+    margin-top: 2px; 
+    width: calc(50% -8px); 
+    /* Elementos do formulário */
+}
+
+.form_box input[name=assunto] { 
+    width: 100%; 
+}
+
+.form_box input[name=nome], .form_box input[name=e-mail] {   
+    width: 400px; 
+}
+
+.form_box textarea { 
+    height: 100px; 
+    margin-top: 2px; 
+    padding: 10px; 
+    width: 100%;
+}
+
+.section7 { 
+    align-items: center; 
+    display: flex; 
+    height: 100%; 
+    justify-content: center; 
+    padding: 20px;  
+    width: 100%; 
+    /* Section que contém o formulário */
+}
+
+/* Botão voltar ao topo (Javascript) */
+
+#btnTopo {   
+    bottom: 4px;    
+    border-style: solid; 
+    border-radius: 8px; 
+    cursor: pointer; /* Mão clicável ao passar o cursor sobre o botão */
+    display: none; 
+    height: 40px;
+    position: fixed; 
+    right: 30px;
+    width: 40px;
+    z-index: 99; 
+}
+
+#btnTopo img {
+    bottom: 4px;    
+    height: 40px;
+    position: fixed; 
+    right: 30px;
+    width: 40px;
+}
+
+/* Estilização do Rodapé */
+
+.borboleta { 
+    height: 23px; 
+    width: 23px; 
+    /* Fonte do ícone: https://www.flaticon.com/br/icone-gratis/borboleta_338337?term=borboleta+azul&page=1&position=1&origin=search&related_id=338337 */
+}
+
+.rodape {
+    align-items: center; 
+    color: #000000;
+    display: flex;
+    font-size: 15px; 
+    font-weight: 500; 
+    gap: 10px; /* Lacuna entre a imagem do rodapé (Borboleta) e o nome */
+    margin-top: auto; /* Rodapé no fim da página */
+    padding-top: 30px; 
+    text-align: center;
+}
+
+}
